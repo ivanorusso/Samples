@@ -1,0 +1,16 @@
+Simple Factory
+
+The easiest way is that a simple factory is called directly by the class
+which wants to create an object (the calling class is referred to as the "client"). 
+The simple factory returns one of many different classes.  
+All the classes that a simple factory can return either inherit from the same parent class, 
+or implement the same interface.
+
+
+Step One: you call a method in the factory.  Here it makes sense to use a static method.  The parameters for your call tell the factory which class to create.
+
+Step Two:  the factory creates your object. The only thing to note is that of all the objects it can create, the objects have the same parent class, or implement the same interface.
+
+Step Three: factory returns the object, and this is why step two makes sense.  Since the client didn't know what was going to be returned, the client is expecting a type that matches the parent class /interface.
+
+This is not an “official” design pattern.
