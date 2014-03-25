@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernatesample</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">ererer</property>
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="hibernate.connection.pool_size">1</property>
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<!-- Update the changes to the database schema on startup -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping package="com.ir.sample.orm.hibernatesample.model" />
+		<mapping class="com.ir.sample.orm.hibernatesample.model.User" />
+		<mapping class="com.ir.sample.orm.hibernatesample.model.Product" />
+		<mapping class="com.ir.sample.orm.hibernatesample.model.Sale" />
+
+	</session-factory>
+
+</hibernate-configuration>
