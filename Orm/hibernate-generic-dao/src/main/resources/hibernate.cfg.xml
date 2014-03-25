@@ -24,7 +24,6 @@
 		<!-- Update the changes to the database schema on startup -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
-
 		<mapping package="com.ir.sample.orm.hibernatesample.model" />
 		<mapping class="com.ir.sample.orm.hibernatesample.model.User" />
 		<mapping class="com.ir.sample.orm.hibernatesample.model.Product" />
